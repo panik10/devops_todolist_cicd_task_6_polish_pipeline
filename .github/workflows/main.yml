@@ -84,7 +84,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: python-artifacts
-          path: ./${{ github.event_name }}
+          path: ./${{ github.job }}
 
       - name: Upload helm artifacts
         if: github.ref_name == 'main'
@@ -111,7 +111,7 @@ jobs:
       name: Download python artifacts
       with:
         name: python-artifacts
-        path: ./${{ github.event_name }}
+        path: ./${{ github.job }}
 
     - name: Login to Docker Hub
       uses: docker/login-action@v3
