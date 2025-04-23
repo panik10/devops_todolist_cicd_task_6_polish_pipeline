@@ -38,7 +38,7 @@ concurrency:
 
 env:
   PythonVersion: 3.8
-  DockerImageName: ${{ secrets.DOCKERHUB_USERNAME }}/todoapp
+  DockerImageName: todoapp
 
 jobs:
   python-ci:
