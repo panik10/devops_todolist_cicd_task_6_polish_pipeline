@@ -11,21 +11,21 @@ on:
     inputs:
       environment:
         description: "Env deploy to"
-        required: true
+        required: false
         type: choice
-        options: ['dev', 'staging', 'production']
+        options: ['development', 'staging']
       os:
         description: "OS deploy to"
         required: false
         type: choice
         options: ['ubuntu-latest', 'windows-latest']
-        default: "ubuntu-latest"
+        default: 'ubuntu-latest'
       python_version:
         description: "Python version"
         required: false
         type: choice
         options: [3.8, 3.9]
-        default: "3.8"
+        default: '3.8'
       message:
         description: "Message"
         type: string
