@@ -112,7 +112,7 @@ jobs:
     - uses: actions/download-artifact@v4
       name: Download python artifacts
       with:
-        name: python-artifacts-${{ inputs.os || 'ubuntu-latest' }}-${{ inputs.python_version || 3.8 }}
+        name: python-artifacts-${{ inputs.os || 'ubuntu-latest' }}-${{ inputs.python_version || 3.8 }} # In this step the version will be ubunte-latest and python 3.8 if the values are not provided
         path: .
 
     - name: Login to Docker Hub
