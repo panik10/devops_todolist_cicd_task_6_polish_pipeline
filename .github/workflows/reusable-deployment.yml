@@ -62,7 +62,7 @@ jobs:
           --set todoapp.secrets.DB_NAME="${{ secrets.APP_DB_NAME }}" \
           --set todoapp.secrets.DB_USER="${{ secrets.MYSQL_USER }}" \
           --set todoapp.secrets.DB_PASSWORD="${{ secrets.MYSQL_PASSWORD }}" \
-          --set todoapp.secrets.DB_HOST="${{ env.DB_HOST }}" \
+          --set todoapp.secrets.DB_HOST="${{ secrets.DB_HOST }}" \
           --set todoapp.namespace="${{ github.env.APP_NS }}" \
           --set todoapp.image.tag=${{ github.sha }}
 
@@ -78,7 +78,7 @@ jobs:
           --set todoapp.secrets.DB_NAME="${{ secrets.APP_DB_NAME }}" \
           --set todoapp.secrets.DB_USER="${{ secrets.MYSQL_USER }}" \
           --set todoapp.secrets.DB_PASSWORD="${{ secrets.MYSQL_PASSWORD }}" \
-          --set todoapp.secrets.DB_HOST="${{ secrets.APP_DB_HOST }}" \
+          --set todoapp.secrets.DB_HOST="${{ secrets.DB_HOST }}" \
           --set todoapp.namespace="${{ github.env.APP_NS }}" \
           --set todoapp.image.tag=${{ github.sha }}
 
