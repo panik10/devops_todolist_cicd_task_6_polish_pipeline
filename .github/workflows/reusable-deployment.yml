@@ -81,4 +81,3 @@ jobs:
           --set todoapp.secrets.DB_HOST="${{ secrets.DB_HOST }}" \
           --set todoapp.namespace="${{ vars.APP_NS }}" \
           --set todoapp.image.tag=${{ github.sha }}
-
